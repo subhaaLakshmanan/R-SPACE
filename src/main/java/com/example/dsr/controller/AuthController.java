@@ -14,9 +14,11 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import com.example.dsr.model.ERole;
 import com.example.dsr.model.Employee;
@@ -67,6 +69,10 @@ public class AuthController {
         this.departmentRepository = departmentRepository;
     }
 	
+    @GetMapping("/getdata")
+	public ResponseEntity<?> getData() {
+	    return ResponseEntity.ok("get data");
+	}
 	@PostMapping("/signin")
 	public ResponseEntity<?> authenticateUser(@Valid @RequestBody LoginRequest loginRequest,HttpServletRequest servrequest) {
 		
