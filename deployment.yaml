@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dsr-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: dsr
+  template:
+    metadata:
+      labels:
+        app: dsr
+    spec:
+      containers:
+      - name: dsr
+        image: subhalakshmil/dsr:latest
+        ports:
+        - containerPort: 8585

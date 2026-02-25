@@ -19,6 +19,7 @@ public class ReleaseDTO {
 	private Long projectid;
 	private String title;
 	private String version;
+	private String parent_version;
 	private String release_type;
 	private LocalDate planned_date;
 	private LocalDate released_date;

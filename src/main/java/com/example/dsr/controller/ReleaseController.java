@@ -60,9 +60,9 @@ public class ReleaseController {
 		return releaseService.getReleaseMaildetailsById(id);
 	}
  
-	 @GetMapping("/versions")
-		public ResponseEntity<?> getLast5Versions(@RequestParam Long projectid) {
-		    return ResponseEntity.ok(releaseService.getVersionDetails(projected));
-		}
+	@GetMapping("/versions")
+	public ResponseEntity<?> getLast5Versions(@RequestParam Long projectid) {
+	    return ResponseEntity.ok(releaseService.getVersionDetails(projectid));
+	}
 	
 }

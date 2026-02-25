@@ -480,7 +480,7 @@ public class ReleaseServiceImplementation implements ReleaseService{
 	
 	
 
- 	   @Override
+ 	   
 	    public List<ReleaseDetails> getVersionDetails(Long project_id) {
 
 	        return releaseDetailsRepo.getlatestVersion(project_id);
